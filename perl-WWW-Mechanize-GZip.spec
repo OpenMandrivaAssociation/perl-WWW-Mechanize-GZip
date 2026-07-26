@@ -1,15 +1,13 @@
 %define upstream_name    WWW-Mechanize-GZip
-%define upstream_version 0.14
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.14
+Release:	2
 
 Summary:	Tries to fetch webpages with gzip-compression
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/WWW-Mechanize-GZip
-Source0:	https://cpan.metacpan.org/authors/id/P/PE/PEGI/WWW-Mechanize-GZip-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PE/PEGI/WWW-Mechanize-GZip-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,7 +29,7 @@ the webeserver. If the webserver does not support gzip-compression, no
 decompression will be made.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
